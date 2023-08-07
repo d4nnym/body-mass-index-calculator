@@ -1,0 +1,16 @@
+// header
+$header-value: ("1":$size-1,"2":$size-2,"3":$size-3,"4":$size-4)
+@each $num,$value in $header-value
+  h#{$num}
+    font-size: $value
+
+$letter-spacing-values: ("1":-0.2rem,"2": -0.15rem,"3": -0.075rem,"4": -0.0625rem)
+@each $num,$name in $letter-spacing-values
+  .is-size-#{$num}, h#{$num}
+    color: $gunmetal
+    font-style: normal
+    font-weight: $weight-semibold
+    line-height: $line-height
+    letter-spacing: $name
+
+

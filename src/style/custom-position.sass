@@ -1,0 +1,4 @@
+$custom-position: (relative, absolute, fixed, sticky)
+@each $position in $custom-position
+  .position-#{$position}
+    position: $position

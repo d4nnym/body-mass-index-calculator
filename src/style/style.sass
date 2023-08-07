@@ -1,0 +1,39 @@
+.body-container
+  margin: 0 auto
+  max-width: 1224px
+  padding: 0 $spacing-value-6
+.navbar
+  background: transparent
+.brand
+  width: 64px!important
+
+.hero-background
+  position: absolute
+  top: 0
+  z-index: -1
+  border-radius: 0rem 0rem 2.1875rem 2.1875rem
+  background: var(--gradient-1, linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%))
+  width: 67%
+  height: 46.0625rem
+
+.prueba
+  display: flex
+  justify-content: space-between
+
+@include until($desktop)
+  .navbar
+    background: transparent
+    display: flex
+    justify-content: center
+    .brand
+      width: 40px!important
+
+  .hero-background
+    width: 100%!important
+    
+
+@include until($tablet)
+  .body-container
+    padding: 0 $spacing-value-4
+    
+

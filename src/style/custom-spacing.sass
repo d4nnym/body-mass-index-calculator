@@ -1,0 +1,47 @@
+$spacing-shortcuts: ("margin": "m", "padding": "p") !default
+$spacing-directions: ("top": "t", "right": "r", "bottom": "b", "left": "l") !default
+$spacing-horizontal: "x" !default
+$spacing-vertical: "y" !default
+
+@each $property, $shortcut in $spacing-shortcuts
+  @each $name, $value in $spacing-values
+    // All directions
+    .#{$shortcut}-#{$name}
+      #{$property}: $value !important
+    // Cardinal directions
+    @each $direction, $suffix in $spacing-directions
+      .#{$shortcut}#{$suffix}-#{$name}
+        #{$property}-#{$direction}: $value
+      @include until($desktop)
+        .#{$shortcut}#{$suffix}-#{$name}-md
+          #{$property}-#{$direction}: $value !important
+      @include until($tablet)
+        .#{$shortcut}#{$suffix}-#{$name}-sm
+          #{$property}-#{$direction}: $value !important
+    // Horizontal axis
+    @if $spacing-horizontal != null
+      .#{$shortcut}#{$spacing-horizontal}-#{$name}
+        #{$property}-left: $value
+        #{$property}-right: $value
+      @include until($desktop)
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-md
+          #{$property}-left: $value !important
+          #{$property}-right: $value !important
+      @include until($tablet)
+        .#{$shortcut}#{$spacing-horizontal}-#{$name}-sm
+          #{$property}-left: $value !important
+          #{$property}-right: $value !important
+
+    // Vertical axis
+    @if $spacing-vertical != null
+      .#{$shortcut}#{$spacing-vertical}-#{$name}
+        #{$property}-top: $value
+        #{$property}-bottom: $value
+      @include until($desktop)
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-md
+          #{$property}-top: $value !important
+          #{$property}-bottom: $value !important
+      @include until($tablet)
+        .#{$shortcut}#{$spacing-vertical}-#{$name}-sm
+          #{$property}-top: $value !important
+          #{$property}-bottom: $value !important
