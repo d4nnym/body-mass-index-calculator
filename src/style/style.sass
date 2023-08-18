@@ -16,9 +16,38 @@
   width: 67%
   height: 46.0625rem
 
-.prueba
+.hero-main
   display: flex
   justify-content: space-between
+
+.card
+  color: $gunmetal
+  border-radius: 1rem
+
+input[type="radio"]
+  display: flex 
+  appearance: none
+  border: $border
+  padding: .25rem
+  border-radius: 50%
+  transition: border-color 0.09s linear
+  cursor: pointer
+  &:hover
+    border-color: $blue
+  &:before
+    content: ""
+    background: $blue
+    width: .75rem
+    height:.75rem
+    transform: scale(0)
+    border-radius: 50%
+    transition: transform .1s ease-in-out
+  &:checked
+    background: $grey-lighter
+    &:before
+      transform: scale(1)
+    
+    
 
 @include until($desktop)
   .navbar
@@ -30,10 +59,10 @@
 
   .hero-background
     width: 100%!important
-    
+
+  .hero-main
+    display: block!important
 
 @include until($tablet)
   .body-container
     padding: 0 $spacing-value-4
-    
-

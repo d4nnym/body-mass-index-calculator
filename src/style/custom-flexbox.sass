@@ -1,0 +1,10 @@
+$device-value: ("sm":$tablet,"md":$desktop)
+
+@each $value in $justify-content-values
+  .is-justify-content-#{$value}
+    justify-content: $value 
+    @each $device,$breakpoint-value in $device-value
+      @include until($breakpoint-value)
+        .is-justify-content-#{$value}-#{$device}
+          justify-content: $value !important
+

@@ -86,6 +86,7 @@ Terminar un proyecto es muy satisfactorio y emocionante. Sin embargo, siempre ha
 
 - [CSS BEM (Bloque, Elemento, Modificador)](https://platzi.com/blog/bem/) - Metodología de nomenclatura para CSS.
 - [Iniciar un Proyecto con Vite](https://carlosazaustre.es/react-vite) - Vite es un bundler que permite crear proyectos de React de forma rápida.
+- [Customizar Radio Buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons/) - Crear radio buttons personalizados con CSS.
 
 **Recursos que siempre mantengo a mano**
 - [HTML y CSS](https://marksheet.io/) - Cuando requiero de algo, rápidamente puedo encontrarlo. 
